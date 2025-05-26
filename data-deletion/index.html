@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Data Deletion - LuxeList</title>
+    <link rel="stylesheet" href="../styles.css"> <!-- Link to main styles -->
+    <style>
+        body {
+            font-family: 'LibreBaskerville', serif;
+            background-color: #F1EDEA;
+            color: #1B263B;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #C9A678;
+        }
+        form {
+            text-align: left;
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .checkbox-group {
+            text-align: left;
+            margin: 15px 0;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        textarea, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #1B263B;
+        }
+        button {
+            background-color: #1B263B;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #C9A678;
+            color: #1B263B;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Request Data Deletion</h1>
+        <p>You can request the deletion of specific data while keeping your LuxeList account active.</p>
+
+        <form id="dataDeletionForm">
+            <label>Your Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <div class="checkbox-group">
+                <p>Select the data you want to delete:</p>
+                <label><input type="checkbox" name="data" value="closet_items"> Closet Items</label><br>
+                <label><input type="checkbox" name="data" value="outfits"> Outfits</label><br>
+                <label><input type="checkbox" name="data" value="saved_preferences"> Saved Preferences</label><br>
+                <label><input type="checkbox" name="data" value="other"> Other (please specify below)</label>
+            </div>
+
+            <label>Additional Information (optional):</label>
+            <textarea id="additionalInfo" placeholder="Describe any other data you want to remove"></textarea>
+
+            <button type="submit">Submit Request</button>
+        </form>
+
+        <p class="footer">LuxeList &copy; 2024 | <a href="../privacy/">Privacy Policy</a> | <a href="../tos/">Terms of Service</a></p>
+    </div>
+
+    <script src="../data-deletion.js"></script> <!-- Link to JavaScript handling submission -->
+</body>
+</html>
